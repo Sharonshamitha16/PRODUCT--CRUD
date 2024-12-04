@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const Update = () => {
 
@@ -78,7 +78,9 @@ return (
                 placeholder='Rating'
                 className='flex justify-center flex items-center p-2 border border-teal-300 ' />
             <div className='flex gap-1 flex-row'>  <button className=' w-1/2 px-3 py-1.5 rounded text-white bg-blue-500 hover:opacity-0.5 ' type='submit' >Update</button>
-             <button className=' w-1/2 px-3 py-1.5 rounded text-white bg-blue-500 hover:opacity-1' type='reset'>Reset </button></div>
+             <button className=' w-1/2 px-3 py-1.5 rounded text-white bg-blue-500 hover:opacity-1' type='reset'>Reset </button>
+             <Link to='/read'><button className=' w-full px-3 py-1.5 rounded text-white bg-blue-500 hover:opacity-1' type='reset'>View  </button></Link>
+             </div>
         </form>
     </div>
 )
